@@ -101,7 +101,7 @@ test instead of quietly shifting a number.
 ## Package
 
 ```bash
-npm run bundle           # -> dist/wealthfolio-wheel-tracker-addon-1.1.0.zip
+npm run bundle           # -> dist/wealthfolio-wheel-tracker-addon-1.1.1.zip
 ```
 
 The packager is dependency-free and writes the archive directly, because the

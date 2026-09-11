@@ -1,6 +1,6 @@
 {
   "name": "wealthfolio-wheel-tracker-addon",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Reconstructs options wheel cycles from your activity history and shows premium captured, days held, and return on the capital each leg tied up.",
   "type": "module",
   "main": "dist/addon.js",

@@ -478,22 +478,25 @@ export function WheelPage({ ctx }: { ctx: AddonContext }) {
 
   return (
     <Page>
+      {/* PageHeader renders children only when there is no heading, so the
+          filter has to go through `actions`. */}
       <PageHeader
         heading="Wheel"
         text="Where each position sits in the cycle, and what the capital behind it earned."
-      >
-        <Select value={account} onValueChange={setAccount}>
-          <SelectTrigger className="h-9 w-48">
-            <SelectValue placeholder="All accounts" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value={ALL}>All accounts</SelectItem>
-            {(accounts.data ?? []).map((a: { id: string; name: string }) => (
-              <SelectItem key={a.id} value={a.id}>{a.name}</SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </PageHeader>
+        actions={
+          <Select value={account} onValueChange={setAccount}>
+            <SelectTrigger className="h-9 w-48">
+              <SelectValue placeholder="All accounts" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value={ALL}>All accounts</SelectItem>
+              {(accounts.data ?? []).map((a: { id: string; name: string }) => (
+                <SelectItem key={a.id} value={a.id}>{a.name}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        }
+      />
 
       <PageContent>
         {legs.length === 0 ? (
