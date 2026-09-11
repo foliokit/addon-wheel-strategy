@@ -1,0 +1,59 @@
+{
+  "name": "wealthfolio-wheel-tracker-addon",
+  "version": "1.1.0",
+  "description": "Reconstructs options wheel cycles from your activity history and shows premium captured, days held, and return on the capital each leg tied up.",
+  "type": "module",
+  "main": "dist/addon.js",
+  "keywords": [
+    "wealthfolio",
+    "addon",
+    "options",
+    "wheel"
+  ],
+  "author": "Josanshuo",
+  "homepage": "https://github.com/foliokit/addon-wheel-strategy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foliokit/addon-wheel-strategy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/foliokit/addon-wheel-strategy/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "dev:server": "wealthfolio-addon dev",
+    "clean": "rimraf dist",
+    "package": "node scripts/package.mjs",
+    "bundle": "npm run clean && npm run build && npm run package",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.90.0",
+    "@wealthfolio/addon-sdk": "^3.8.0",
+    "@wealthfolio/ui": "^3.8.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.90.20",
+    "@tailwindcss/vite": "^4.1.13",
+    "@wealthfolio/addon-dev-tools": "^3.8.0",
+    "@wealthfolio/addon-sdk": "^3.8.0",
+    "@wealthfolio/ui": "^3.8.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^2.1.9"
+  }
+}

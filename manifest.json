@@ -1,0 +1,73 @@
+{
+  "id": "wheel-tracker",
+  "name": "Wheel",
+  "version": "1.1.0",
+  "description": "Reconstructs options wheel cycles from your activity history and shows premium captured, days held, and return on the capital each leg tied up.",
+  "author": "Josanshuo",
+  "homepage": "https://github.com/foliokit/addon-wheel-strategy",
+  "repository": "https://github.com/foliokit/addon-wheel-strategy",
+  "main": "dist/addon.js",
+  "sdkVersion": "3.8.0",
+  "minWealthfolioVersion": "3.8.0",
+  "enabled": true,
+  "contributes": {
+    "routes": [
+      {
+        "id": "wheel-tracker"
+      }
+    ],
+    "links": {
+      "sidebar": [
+        {
+          "id": "wheel-tracker",
+          "route": "wheel-tracker",
+          "label": "Wheel",
+          "icon": "percent",
+          "order": 100
+        }
+      ]
+    }
+  },
+  "hostDependencies": {
+    "@tanstack/react-query": "^5.90.0",
+    "@wealthfolio/addon-sdk": "^3.8.0",
+    "@wealthfolio/ui": "^3.8.0",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.561.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "recharts": "^3.7.0"
+  },
+  "permissions": [
+    {
+      "category": "activities",
+      "functions": [
+        "getAll"
+      ],
+      "purpose": "Read option trades to pair opens with closes and compute premium captured."
+    },
+    {
+      "category": "accounts",
+      "functions": [
+        "getAll"
+      ],
+      "purpose": "Label legs by account and offer an account filter."
+    },
+    {
+      "category": "quotes",
+      "functions": [
+        "getHistory"
+      ],
+      "purpose": "Check whether a contract has price history, so a leg with none falls back to the underlying's chart."
+    }
+  ],
+  "keywords": [
+    "wealthfolio",
+    "addon",
+    "options",
+    "wheel",
+    "covered-call",
+    "cash-secured-put"
+  ],
+  "license": "MIT"
+}
