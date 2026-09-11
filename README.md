@@ -26,6 +26,10 @@ put has a matching stock buy at the strike, a worthless expiry has nothing — s
 **Collapsible history per underlying**, defaulting to open legs with a toggle
 for closed ones. Groups holding something live start expanded.
 
+**An account filter that lists only accounts a leg can come from** —
+securities accounts tracked by transactions. Cash, credit-card and
+holdings-only accounts stay out of the list.
+
 **Return on capital committed** — strike notional for a short (a cash-secured
 put, or the proceeds a covered call gives up), premium paid for a long —
 annualized by days held, and capital-weighted across positions so a 2,000%
@@ -101,7 +105,7 @@ test instead of quietly shifting a number.
 ## Package
 
 ```bash
-npm run bundle           # -> dist/wealthfolio-wheel-tracker-addon-1.1.1.zip
+npm run bundle           # -> dist/wealthfolio-wheel-tracker-addon-1.1.2.zip
 ```
 
 The packager is dependency-free and writes the archive directly, because the

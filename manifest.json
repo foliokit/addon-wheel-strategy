@@ -1,7 +1,7 @@
 {
   "id": "wheel-tracker",
   "name": "Wheel",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Reconstructs options wheel cycles from your activity history and shows premium captured, days held, and return on the capital each leg tied up.",
   "author": "Josanshuo",
   "homepage": "https://github.com/foliokit/addon-wheel-strategy",

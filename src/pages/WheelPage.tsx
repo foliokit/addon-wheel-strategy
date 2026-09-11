@@ -44,6 +44,7 @@ import {
   type WireActivity,
 } from '../lib/wheel';
 import { assignedShares, buildCycles, cycleForLeg, stageLabel, type Cycle, type Stage } from '../lib/cycle';
+import { wheelAccounts } from '../lib/accounts';
 
 const ALL = '__all__';
 
@@ -490,7 +491,7 @@ export function WheelPage({ ctx }: { ctx: AddonContext }) {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value={ALL}>All accounts</SelectItem>
-              {(accounts.data ?? []).map((a: { id: string; name: string }) => (
+              {wheelAccounts(accounts.data ?? []).map((a) => (
                 <SelectItem key={a.id} value={a.id}>{a.name}</SelectItem>
               ))}
             </SelectContent>
